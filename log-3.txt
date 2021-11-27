@@ -1,0 +1,74 @@
+run pytorch ...
+:::MLLOG {"namespace": "", "time_ms": 1637997592432, "event_type": "POINT_IN_TIME", "key": "cache_clear", "value": true, "metadata": {"file": "dlrm_s_pytorch2.py", "lineno": 1181}}
+:::MLLOG {"namespace": "", "time_ms": 1637997592516, "event_type": "INTERVAL_START", "key": "init_start", "value": null, "metadata": {"file": "dlrm_s_pytorch2.py", "lineno": 1183}}
+world size: 1, current rank: 0, local rank: 0
+Using CPU...
+:::MLLOG {"namespace": "", "time_ms": 1637997592517, "event_type": "INTERVAL_END", "key": "init_stop", "value": null, "metadata": {"file": "dlrm_s_pytorch2.py", "lineno": 1243}}
+:::MLLOG {"namespace": "", "time_ms": 1637997592517, "event_type": "INTERVAL_START", "key": "run_start", "value": null, "metadata": {"file": "dlrm_s_pytorch2.py", "lineno": 1245}}
+Reading pre-processed data=./input/kaggleAdDisplayChallenge_processed.npz
+Sparse fea = 26, Dense fea = 13
+Defined train indices...
+Randomized indices across days ...
+Split data according to indices...
+Reading pre-processed data=./input/kaggleAdDisplayChallenge_processed.npz
+Sparse fea = 26, Dense fea = 13
+Defined test indices...
+Randomized indices across days ...
+Split data according to indices...
+command line args:  {"arch_sparse_feature_size": 16, "arch_embedding_size": "4-3-2", "arch_mlp_bot": "13-512-256-64-16", "arch_mlp_top": "512-256-1", "arch_interaction_op": "dot", "arch_interaction_itself": false, "weighted_pooling": null, "md_flag": false, "md_threshold": 200, "md_temperature": 0.3, "md_round_dims": false, "qr_flag": false, "qr_threshold": 200, "qr_operation": "mult", "qr_collisions": 4, "activation_function": "relu", "loss_function": "bce", "loss_weights": "1.0-1.0", "loss_threshold": 0.0, "round_targets": true, "data_size": 1, "num_batches": 0, "data_generation": "dataset", "rand_data_dist": "uniform", "rand_data_min": 0, "rand_data_max": 1, "rand_data_mu": -1, "rand_data_sigma": 1, "data_trace_file": "./input/dist_emb_j.log", "data_set": "kaggle", "raw_data_file": "./input/train.txt", "processed_data_file": "./input/kaggleAdDisplayChallenge_processed.npz", "data_randomize": "total", "data_trace_enable_padding": false, "max_ind_range": -1, "data_sub_sample_rate": 0.0, "num_indices_per_lookup": 10, "num_indices_per_lookup_fixed": false, "num_workers": 0, "memory_map": false, "mini_batch_size": 128, "nepochs": 1, "learning_rate": 0.1, "print_precision": 5, "numpy_rand_seed": 123, "sync_dense_params": true, "optimizer": "sgd", "dataset_multiprocessing": false, "inference_only": true, "quantize_mlp_with_bit": 32, "quantize_emb_with_bit": 32, "save_onnx": false, "use_gpu": false, "local_rank": -1, "dist_backend": "", "print_freq": 1024, "test_freq": -1, "test_mini_batch_size": 1, "test_num_workers": 0, "print_time": true, "print_wall_time": false, "debug_mode": false, "enable_profiling": false, "plot_compute_graph": false, "tensor_board_filename": "run_kaggle_pt", "save_model": "", "load_model": "model.pth", "ev_path": "weights_and_biases/epoch-0/ev-table-4", "num_of_dp": 0, "mlperf_logging": true, "mlperf_acc_threshold": 0.0, "mlperf_auc_threshold": 0.0, "mlperf_bin_loader": false, "mlperf_bin_shuffle": false, "mlperf_grad_accum_iter": 1, "lr_num_warmup_steps": 0, "lr_decay_start_step": 0, "lr_num_decay_steps": 0, "ln_emb": [1460, 583, 10131227, 2202608, 305, 24, 12517, 633, 3, 93145, 5683, 8351593, 3194, 27, 14992, 5461306, 10, 5652, 2173, 4, 7046547, 18, 15, 286181, 105, 142572]}
+:::MLLOG {"namespace": "", "time_ms": 1637997728939, "event_type": "POINT_IN_TIME", "key": "submission_benchmark", "value": "dlrm", "metadata": {"file": "/home/cc/dlrm2/ev-table-dlrm/mlperf_logger.py", "lineno": 89}}
+:::MLLOG {"namespace": "", "time_ms": 1637997728939, "event_type": "POINT_IN_TIME", "key": "submission_org", "value": "reference_implementation", "metadata": {"file": "/home/cc/dlrm2/ev-table-dlrm/mlperf_logger.py", "lineno": 94}}
+:::MLLOG {"namespace": "", "time_ms": 1637997728939, "event_type": "POINT_IN_TIME", "key": "submission_division", "value": "closed", "metadata": {"file": "/home/cc/dlrm2/ev-table-dlrm/mlperf_logger.py", "lineno": 98}}
+:::MLLOG {"namespace": "", "time_ms": 1637997728939, "event_type": "POINT_IN_TIME", "key": "submission_status", "value": "onprem", "metadata": {"file": "/home/cc/dlrm2/ev-table-dlrm/mlperf_logger.py", "lineno": 102}}
+:::MLLOG {"namespace": "", "time_ms": 1637997728940, "event_type": "POINT_IN_TIME", "key": "submission_platform", "value": "reference_implementation", "metadata": {"file": "/home/cc/dlrm2/ev-table-dlrm/mlperf_logger.py", "lineno": 106}}
+:::MLLOG {"namespace": "", "time_ms": 1637997728940, "event_type": "POINT_IN_TIME", "key": "submission_entry", "value": "reference_implementation", "metadata": {"file": "/home/cc/dlrm2/ev-table-dlrm/mlperf_logger.py", "lineno": 110}}
+:::MLLOG {"namespace": "", "time_ms": 1637997728940, "event_type": "POINT_IN_TIME", "key": "submission_poc_name", "value": "reference_implementation", "metadata": {"file": "/home/cc/dlrm2/ev-table-dlrm/mlperf_logger.py", "lineno": 114}}
+:::MLLOG {"namespace": "", "time_ms": 1637997728940, "event_type": "POINT_IN_TIME", "key": "submission_poc_email", "value": "reference_implementation", "metadata": {"file": "/home/cc/dlrm2/ev-table-dlrm/mlperf_logger.py", "lineno": 118}}
+:::MLLOG {"namespace": "", "time_ms": 1637997728940, "event_type": "POINT_IN_TIME", "key": "seed", "value": 123, "metadata": {"file": "dlrm_s_pytorch2.py", "lineno": 1527}}
+:::MLLOG {"namespace": "", "time_ms": 1637997728940, "event_type": "POINT_IN_TIME", "key": "global_batch_size", "value": 128, "metadata": {"file": "dlrm_s_pytorch2.py", "lineno": 1530}}
+Loading saved model model.pth
+Saved at: epoch = 0/1, batch = 306969/306969, ntbatch = 200
+Training state: loss = 0.447855
+Testing state: accuracy = 78.798 %, auc = 0.803
+****************Loading embedding layers
+****************Load new set of EV Table from = weights_and_biases/epoch-0/ev-table-4
+*********************Loading NEW EV per embedding layer = weights_and_biases/epoch-0/ev-table-4/ev-table-1.csv
+*********************Loading NEW EV per embedding layer = weights_and_biases/epoch-0/ev-table-4/ev-table-2.csv
+*********************Loading NEW EV per embedding layer = weights_and_biases/epoch-0/ev-table-4/ev-table-3.csv
+*********************Loading NEW EV per embedding layer = weights_and_biases/epoch-0/ev-table-4/ev-table-4.csv
+*********************Loading NEW EV per embedding layer = weights_and_biases/epoch-0/ev-table-4/ev-table-5.csv
+*********************Loading NEW EV per embedding layer = weights_and_biases/epoch-0/ev-table-4/ev-table-6.csv
+*********************Loading NEW EV per embedding layer = weights_and_biases/epoch-0/ev-table-4/ev-table-7.csv
+*********************Loading NEW EV per embedding layer = weights_and_biases/epoch-0/ev-table-4/ev-table-8.csv
+*********************Loading NEW EV per embedding layer = weights_and_biases/epoch-0/ev-table-4/ev-table-9.csv
+*********************Loading NEW EV per embedding layer = weights_and_biases/epoch-0/ev-table-4/ev-table-10.csv
+*********************Loading NEW EV per embedding layer = weights_and_biases/epoch-0/ev-table-4/ev-table-11.csv
+*********************Loading NEW EV per embedding layer = weights_and_biases/epoch-0/ev-table-4/ev-table-12.csv
+*********************Loading NEW EV per embedding layer = weights_and_biases/epoch-0/ev-table-4/ev-table-13.csv
+*********************Loading NEW EV per embedding layer = weights_and_biases/epoch-0/ev-table-4/ev-table-14.csv
+*********************Loading NEW EV per embedding layer = weights_and_biases/epoch-0/ev-table-4/ev-table-15.csv
+*********************Loading NEW EV per embedding layer = weights_and_biases/epoch-0/ev-table-4/ev-table-16.csv
+*********************Loading NEW EV per embedding layer = weights_and_biases/epoch-0/ev-table-4/ev-table-17.csv
+*********************Loading NEW EV per embedding layer = weights_and_biases/epoch-0/ev-table-4/ev-table-18.csv
+*********************Loading NEW EV per embedding layer = weights_and_biases/epoch-0/ev-table-4/ev-table-19.csv
+*********************Loading NEW EV per embedding layer = weights_and_biases/epoch-0/ev-table-4/ev-table-20.csv
+*********************Loading NEW EV per embedding layer = weights_and_biases/epoch-0/ev-table-4/ev-table-21.csv
+*********************Loading NEW EV per embedding layer = weights_and_biases/epoch-0/ev-table-4/ev-table-22.csv
+*********************Loading NEW EV per embedding layer = weights_and_biases/epoch-0/ev-table-4/ev-table-23.csv
+*********************Loading NEW EV per embedding layer = weights_and_biases/epoch-0/ev-table-4/ev-table-24.csv
+*********************Loading NEW EV per embedding layer = weights_and_biases/epoch-0/ev-table-4/ev-table-25.csv
+*********************Loading NEW EV per embedding layer = weights_and_biases/epoch-0/ev-table-4/ev-table-26.csv
+****************All EvTable loaded in the Memory!
+time/loss/accuracy (if enabled):
+:::MLLOG {"namespace": "", "time_ms": 1637997758882, "event_type": "POINT_IN_TIME", "key": "opt_base_learning_rate", "value": 0.1, "metadata": {"file": "dlrm_s_pytorch2.py", "lineno": 1659}}
+:::MLLOG {"namespace": "", "time_ms": 1637997758883, "event_type": "POINT_IN_TIME", "key": "opt_learning_rate_warmup_steps", "value": 0, "metadata": {"file": "dlrm_s_pytorch2.py", "lineno": 1663}}
+:::MLLOG {"namespace": "", "time_ms": 1637997758883, "event_type": "POINT_IN_TIME", "key": "sgd_opt_base_learning_rate", "value": 0.1, "metadata": {"file": "dlrm_s_pytorch2.py", "lineno": 1668}}
+:::MLLOG {"namespace": "", "time_ms": 1637997758883, "event_type": "POINT_IN_TIME", "key": "lr_decay_start_steps", "value": 0, "metadata": {"file": "dlrm_s_pytorch2.py", "lineno": 1671}}
+:::MLLOG {"namespace": "", "time_ms": 1637997758883, "event_type": "POINT_IN_TIME", "key": "sgd_opt_learning_rate_decay_steps", "value": 0, "metadata": {"file": "dlrm_s_pytorch2.py", "lineno": 1674}}
+:::MLLOG {"namespace": "", "time_ms": 1637997758883, "event_type": "POINT_IN_TIME", "key": "sgd_opt_learning_rate_decay_poly_power", "value": 2, "metadata": {"file": "dlrm_s_pytorch2.py", "lineno": 1676}}
+Testing for inference only
+recall 0.0363, precision 0.7929, f1 0.0694, ap 0.4961, auc 0.7599, best auc 0.7599, accuracy 76.792 %, best accuracy 0.000 %
+/home/cc/dlrm2/ev-table-dlrm/dlrm_data_pytorch.py:331: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at  ../torch/csrc/utils/tensor_new.cpp:201.)
+  X_int = torch.log(torch.tensor(transposed_data[0], dtype=torch.float) + 1)
+本次运行时间： 1113s
+done

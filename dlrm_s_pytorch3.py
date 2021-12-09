@@ -114,7 +114,7 @@ with warnings.catch_warnings():
 
 exc = getattr(builtins, "IOError", "FileNotFoundError")
 
-
+# count4Print = 0
 #################################################################################################
 def appendWorkloadFiles(workloadDir, datas):
     # data format: (n, 26) : n->batch size
@@ -493,7 +493,10 @@ class DLRM_Net(nn.Module):
             key = str(k+1)+'-'+str(sparse_index[0])
             group_keys.append(key)
         _, ly = mixPrecisionRequest(group_keys)
-
+#         global count4Print
+#         count4Print += 1
+#         if count4Print <= 100:
+#             print(ly)
 #         print(len(ly))
 #         print(len(ly[0]))
 #         for i in range(len(ly)):
@@ -1523,8 +1526,8 @@ def run():
 #         # load the new state_dict into the dlrm
 #         dlrm.load_state_dict(ld_model["state_dict"])
          
-    EvLFU4DLRM_C1.loadEvTable('weights_and_biases/epoch-0/ev-table')
-    EvLFU4DLRM_C2.loadEvTable(args.ev_path)
+    EvLFU4DLRM_C1.loadEvTable()
+    EvLFU4DLRM_C2.loadEvTable()
     if args.inference_only:
         # Currently only dynamic quantization with INT8 and FP16 weights are
         # supported for MLPs and INT4 and INT8 weights for EmbeddingBag

@@ -5,14 +5,14 @@ import os
 
 # EvLFU part
 # Change here for higher precision!
-EVPATH = "D:\\github\\ev-table-dlrm\\weights_and_biases\\epoch-0\\ev-table-4\\"
+EVPATH_C1 = "weights_and_biases/epoch-0/ev-table-8"
 EvTable_C1 = dict()
 
 
-def loadEvTable(ev_path):
+def loadEvTable(ev_path=EVPATH_C1):
     print("****************Loading embedding layers")
 
-    print("****************Load new set of EV Table from = " + EVPATH)
+    print("****************Load new set of EV Table from = " + EVPATH_C1)
 
     for ev_idx in range(0, 26):
         # Reference: Daniar's Github
@@ -228,5 +228,5 @@ def main():
 
 
 if __name__ == '__main__':
-    loadEvTable(EVPATH)
+    loadEvTable(EVPATH_C1)
     main()

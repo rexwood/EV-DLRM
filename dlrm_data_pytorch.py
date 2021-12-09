@@ -470,7 +470,7 @@ def make_criteo_data_and_loaders(args, offset_to_length_converter=False):
                 test_data,
                 batch_size=None,
                 batch_sampler=None,
-                shuffle=False,
+                shuffle=True,
                 num_workers=0,
                 collate_fn=None,
                 pin_memory=False,
